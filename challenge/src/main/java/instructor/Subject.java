@@ -57,5 +57,27 @@ public class Subject {
         return str1.toString();
     }
 
+    public static void main(String[] args) {
+        Instructor prof1 = new Instructor("Amine", "Abdellaoui", "0600000000", "amine.abdellaoui@um6p.ma", " AB 123");
+        Instructor prof2 = new Instructor(null, "Smith", "0612345678", "smith@test.com", "SM456");
+
+        Subject sub1 = new Subject(1, " cs-101", "introduction to java");
+        Subject sub2 = new Subject(2, "MATH-200", "linear algebra");
+
+        System.out.println(prof1.cleanEmployeeNumber());
+        System.out.println(prof1.summaryLine());
+        System.out.println(prof1.displayName());
+        System.out.println(prof2.displayName());
+
+        System.out.println(prof1.toCard());
+
+        System.out.println(sub1.normalizedCode());
+        System.out.println(sub1.properTitle());
+        System.out.println(sub1.isIntroCourse());
+        System.out.println(sub2.isIntroCourse());
+
+        System.out.println(sub1.syllabusLine(prof1));
+    }
+
 
 }
