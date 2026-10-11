@@ -5,8 +5,8 @@ public record Circle(double radius) {
 
     @Override
     public double radius() {
-        if (radius < 0) {
-            return -radius;
+        if (radius<0) {
+            return-radius;
         }
         return radius;
     }
